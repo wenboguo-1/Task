@@ -1,0 +1,222 @@
+body{
+     
+     background-color: 		#F5F5F5;
+     margin-left: 30px;;
+}
+.topBar{
+    display: flex;
+    flex-direction: column;
+}
+canvas{
+    margin-top: 50px;
+}
+.month{
+    width: 100px;
+    height: 28px;
+    text-align: center;
+    
+    font-size: 13px;
+    border-radius: 4px;
+        
+
+}
+.mainBar{
+   
+    display: flex;
+    height: 40px;
+    flex-direction: row;
+    background-color: white;
+}
+.Nav5{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+
+}
+.icon2{
+    margin-top: 13px;
+    margin-right: 10px;
+
+}
+.date{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    margin-left: 227px;
+}
+.Nav4{
+    margin-left: 680px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.c1{
+    font-size: 20px;
+    margin-left: 60px;
+}
+.ico1{
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+.Nav2{
+    display: flex;
+    flex-direction: row;
+    margin-left:350px;
+    margin-top:30px;
+}
+.fas{
+    margin-left: 20px;
+}
+.Nav3{
+ 
+    display: flex;
+    flex-direction: row;
+    width: 1500px;
+    height:120px;
+}
+.l8{
+    margin-left: 100px;
+}
+.NavBar{
+     position: relative;
+     display: flex;
+     flex-direction: row;
+     width: 1500px;
+     height: 600px;
+
+}
+.chart{
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     width: 900px;
+     height: 600px;
+     background-color: white;
+     margin-top: 40px;
+     
+}
+.lable1{
+    margin-left: 10px;
+    font-size: 12px;
+
+}
+.bar{
+    
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+
+
+  
+}
+
+.discribtions{
+  
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 600px;
+    background-color: white;
+    margin-left: 10px;
+    margin-top: 40px;
+
+}
+.dis1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+   
+
+}
+.l1{
+    color: 		#C0C0C0;
+  
+    margin-right: 10px;
+   
+}
+.l5{
+    margin-top: -10px;
+    color: 		#C0C0C0;
+}
+.l2{
+    float: right;
+    margin-top: -10px;
+    
+    size: 20px;
+   
+   
+}
+
+.disChild1{
+    float: left;
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    
+}
+.disChild2{
+   
+   float: right;
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+ 
+}
+.disChild3{
+ 
+    display: flex;
+    margin-left: 220px;
+    flex-direction: column;
+}
+.lable3{
+    margin-left: 20px;
+    margin-top: 35px;
+}
+.chart1{
+     margin-top: -40px;
+     
+}
+.disChild4{
+    margin-left:80%;
+    display: flex;
+    margin-top: -50px;
+    flex-direction: column;
+}
+.l6{
+    margin-top:-10px;
+    margin-left: 50px;
+    color: 		#C0C0C0;
+}
+.l3{
+    margin-top: -10px;
+    float: right;
+    margin-left: 60%;
+}
+.l8{
+    margin-top: -10px;
+    margin-left: 10px;
+}
+.l7{
+    margin-top: -10px;
+    margin-left: 20px;
+    
+}
+.disChild5{
+    margin-left:80%;
+    display: flex;
+    margin-top:10px;
+    flex-direction: column;
+}
+.lable2{
+    border-radius: 9px;
+    width: 150px;
+    height: 28px;
+    text-align: center;
+    margin-left: 19px;
+    margin-top: 25px;
+    
+}

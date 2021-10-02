@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styled.css">
+    <script src="https://kit.fontawesome.com/241714f385.js" crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    
+    </div class = "topBar"> 
+     <div class = "mainBar"> 
+       <p style="margin-left: 20px; font-size: 20px ;  color:blue; margin-top: 5px;">Practice Optimizer</p>
+       <label for="pracitice" style="width: 25px; height: 20px; margin-left: 400px; margin-top: 7px;"> Practice(s) </label>
+       <select name="pracitice"  id="pracitice" style="color: gray; width: 170px; height: 20px; margin-left: 50px; margin-top: 7px;">
+              <option value="" style="width: 80px;">1: Your Dental Practice</option>
+       </select>
+       <i class="far fa-heart" style="margin-left: 360px; margin-top: 7px;"></i>
+       <i class="far fa-bell" style="margin-top: 7px; margin-left: 10px;"></i>
+       <i class="far fa-user-circle" style="margin-top: 7px; margin-left: 10px;"></i>
+        <p  style="font-size: 10px; margin-left: 3px; margin-top: 8px; color: gray;"> Your Dental Practice</p>
+        <i class="fas fa-caret-down" style="margin-top: 7px; margin-left: 3px;"></i>
+     
+     </div>
+    <div class = "Nav0">
+        <div class="Nav3" > 
+            <div class="ico1">
+              <i class="fas fa-bars"></i>
+            </div>
+            <p class = "c1"> Practice Profile</p>
+              <div class="Nav4"> 
+                  <div class = "date">
+                      <div class = "icon2" > 
+                          <i class="fas fa-check"></i>
+    
+                      </div>
+                     
+                      <p>PLase updated date 03/01/2021</p>
+                      <div class = "icon2" > 
+                      <i class="fas fa-redo-alt" style="margin-left: 3px;"></i>
+                  </div>
+                  </div>
+                  <div class = "Nav5" > 
+                       <label for="month" class="lable1">
+                           Time Range In: 
+                       </label>
+                       <select name="month" id="month" class="Month" style="font-size:10px; border-radius: 5px; margin-left: 10px; margin-top: -1px;">
+                           <option value="na" >
+                                Months
+                           </option>
+                       </select>
+      
+                       <label for="month" class="lable1">
+                          Total Month: 
+                      </label>
+                      <select name="total" id="total" class="Month" style="font-size:10px; border-radius: 5px; margin-left: 10px;  margin-top: -1px;">
+                          <option value="na" >
+                               24
+                          </option>
+                      </select>
+                      <label for="start" class="lable1">Start date:</label>
+      
+             <input type="date" id="start" style="font-size:10px; border-radius: 5px; margin-left: 10px;  margin-top: -1px;" name="trip-start"
+             value="2021-09-24"
+             min="2021-01-01" max="2021-12-31">
+                  </div>
+              </div>
+    </div>
+  </div>
+     
+    
+    <div class="NavBar ">
+    
+      <div class="chart">
+       
+        <div class="bar">
+          
+            <select name="adjust" id="adjust" style="font-size: 12px;" class="lable2">
+                <option value=""> Adjusted Production </option>
+            </select>
+            <p style="margin-left: 12px; margin-top: 28px; font-size: 14px;"> To</p>
+           <select name="Patients" id="adjust" style="font-size: 12px;" class="lable2">
+            <option value="Pitiens"  > Patiens  </option>
+
+           </select>
+           <div class = "Nav2"> 
+            <i class="fas fa-search-plus"></i>
+            <i class="fas fa-search-minus"></i>
+           </div>
+          
+        
+        </div>
+        <div class="chart1">
+           
+            <div id="chartContainer" style="height: 510px; width: 900px;">
+               
+         </div>
+         <script>
+            window.onload = function () {
+              
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                zoomEnabled: true,
+             
+                axisX: {
+                    title:"Adjusted Production",
+                    titleFontSize: 15,
+                    titleSize:12,
+                    minimum: 0,
+                    maximum:5,
+                    interval: 0.5,
+                    
+                    valueFormatString: "$#0.#M",
+                    labelFontSize: 13,
+                    stripLines:[
+                    {
+           
+                       startValue:2.7,
+                       endValue:2.705,                
+                       color:"black",
+                 
+
+                     }
+                  ]
+                   
+                  
+                },
+                axisY:{
+                    title: "Patients Seen",
+                    titleFontSize: 15,
+                    minimum: 0,
+                    maximum:3500,
+                    stepSize:500,
+                    gridThickness: 0,
+                    labelFontSize: 13,
+                    lineHeigth: 10,
+                    stripLines:[
+                    {
+           
+                       startValue:1750,
+                       endValue:1759,                
+                       color:"black",
+                 
+
+                     }
+                  ]
+                 
+                },
+                data: [
+                        {
+                            type: "line",
+                dataPoints: [
+            
+                    { x: -0.5, y: 2800,lineDashType:"dash"},
+                    { x: 1.3, y: 2800,lineDashType:"dash"},
+                    { x: 1.3, y: -100,lineDashType:"dash"},
+                
+                    ]
+                        },
+                   {
+                    type: "scatter",
+                    indexLabel: "{lable}",
+                    markerSize: 70,
+                   
+                    toolTipContent: "<b>Type: </b>{lable}<br/><b>Adjusted Production : </b>${x}M <br/><b>Patients Seen : </b>{y}  ",
+                    dataPoints: [
+                        {markerBorderColor: "#7B68EE",labelMaxWidth:1 , indexLabelFontSize:10,markerColor:"#E6E6FA",
+                    indexLabelMaxWidth: 40,
+                    markerBorderThickness: 3, lable: "Ferengi "  + "   " + " Teeth",  x: 1, y: 1000,z:50 },
+                    {markerBorderColor: "#4169E1",labelMaxWidth:1 , indexLabelFontSize:10,markerColor:"	#B0C4DE",
+                    indexLabelMaxWidth: 40,
+                    markerBorderThickness: 7, lable: "Affinity Dental",  x: 1.3, y: 2800,z:50},
+                    {markerBorderColor: "	#00FFFF",labelMaxWidth:1 , indexLabelFontSize:10,markerColor:"	#F0FFFF",
+                    indexLabelMaxWidth: 60, 
+                    markerBorderThickness: 3, lable: "Bugs Bunny Dental",  x: 2, y: 2600},
+                    {markerBorderColor: "	#006400",labelMaxWidth:1 , indexLabelFontSize:10,markerColor:"	#7FFFAA",
+                    indexLabelMaxWidth: 40, 
+                    markerBorderThickness: 3, lable: "Klingon Smiles",  x: 2, y: 750},
+                    {markerBorderColor: "	#DEB887",labelMaxWidth:1 , indexLabelFontSize:10,markerColor:"	#FFEBCD",
+                    indexLabelMaxWidth: 45, 
+                    markerBorderThickness: 3, lable: "Awesome Smiles ",  x: 3.75, y: 2700},
+                    {markerBorderColor: "	#FF1493",labelMaxWidth:1 , indexLabelFontSize:10,markerColor:"#FFB6C1",
+                    indexLabelMaxWidth: 45, 
+                    markerBorderThickness: 3, lable: "Bluetooth Dental ",  x: 4.4, y: 1250}
+                        
+                    ],
+                  
+                },
+            ],
+              
+               
+            } 
+             
+            );
+            chart.render();
+            
+            }
+            </script>
+        </div>
+   
+
+    </div>
+    <div class="discribtions"> 
+        <div class="dis1"> 
+           <p class="l4" style="font-size:13px"> Affinity Dental</p>
+           <p class="l5" style="font-size:13px"> 234, Steven Creek, San Jose, CA,95182</p>
+        </div>
+        <div class="dis2"> 
+           <div class="disChild1">
+               <p class="l1" style="font-size:13px">Steciality</p>
+               <p class="l2" style="font-size:13px">General Dentist</p>
+           </div>
+           <div class="disChild2">
+               <p class="l1" style="font-size:13px">Operatories</p>
+               <p class="l3" style="font-size:13px;margin-left: 50px;">3</p>
+           </div>
+        </div>
+        <div class="dis2"> 
+           <div class="disChild1">
+               <p class="l1" style="font-size:13px">Active Patients</p>
+               <p class="l2" style="font-size:13px;">3,829</p>
+           </div>
+           <div class="disChild2">
+               <p class="l1" style="font-size:13px">New Patients per Month</p>
+               <p class="l3" style="font-size:13px; margin-left: 110px;">50</p>
+           </div>
+        </div>
+        <div class="dis2"> 
+           <div class="disChild1">
+               <p class="l1" style="font-size:13px">Recall Patients</p>
+               <p class="l2" style="font-size:13px">200</p>
+           </div>
+           <div class="disChild2">
+               <p class="l1" style="font-size:13px">Patients w / Treatments Plans</p>
+               <p class="l3" style="font-size:13px;margin-left: 120px;">3,289</p>
+           </div>
+        </div>
+        <div class="dis2"> 
+           <div class="disChild1">
+               <p class="l1" style="font-size:13px">Dentists</p>
+               <p class="l2" style="font-size:13px">Dr.Ryan Smith</p>
+               <p class="l2" style="font-size:13px">Dr.Tim.McCarth</p>
+           </div>
+           <div class="disChild3">
+               <p class="l1" style="font-size:13px">Speciaity</p>
+               <p  class="l2" style="font-size:12px">General Dentist</p>
+               <p  class="l2" style="font-size:13px">Pedodontist</p>
+
+             
+           </div>
+           
+           <div class="disChild4">
+               <p class="l6" style="font-size:13px">Np1</p>
+               <p  class="l8" style="font-size:13px">0123456789</p>
+               <p  class="l8" style="font-size:13px">0123456789</p>
+             
+           </div>
+        </div>
+        <div class="dis2"> 
+           <div class="disChild1">
+               <p class="l1" style="font-size:13px">Hygienists</p>
+               <p class="l2" style="font-size:13px">Sarah Downstorm</p> 
+               <p class="l2" style="font-size:13px">Ashley down</p>
+           </div>
+           <div class="disChild5">
+               <p  class="l1" style="font-size:13px"></p>
+               <p class="l8" style="font-size:13px">01234567890</p>
+               <p class="l8" style="font-size:13px">01234567890</p>
+           </div>
+        </div>
+      
+        <div class="dis2"> 
+           <div class="disChild1">
+               <p class="l1" style="font-size:13px">Practice Management Software</p>
+               <p class="l2" style="font-size:13px">General Dentist</p>
+           </div>
+           <div class="disChild2">
+               <p class="l1" style="font-size:13px">Fiance Sofeware</p>
+               <p class="l7" style="font-size:13px">QuikcBooks</p>
+           </div>
+           
+        </div>
+        <div class="dis2"> 
+           <div class="disChild1">
+               <p class="l1" style="font-size:13px">Sikka Master Customer Id</p>
+               <p class="l2" style="font-size:13px">D62493</p>
+           </div>
+           <div class="disChild2">
+               <p class="l1" style="font-size:13px">Sikka Pratice ID</p>
+               <p class="l8" style="font-size:13px; margin-left:60px;">1-1</p>
+           </div>
+           
+        </div>
+    </div>
+   
+
+   
+</body>
+
+</html>
